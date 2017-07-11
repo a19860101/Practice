@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica"; }
+
+svg {
+  border: 1px solid #333;
+  width: 200px;
+  height: 200px; }
+
+#p1 {
+  stroke: #666;
+  stroke-width: 3px; }
+  #p1 circle {
+    fill: #fff; }
+
+#p2 {
+  stroke: #666;
+  stroke-width: 3px; }
+  #p2 circle {
+    fill: #fff; }
+  #p2 rect {
+    fill: none; }
+
+#p3 {
+  stroke: #666;
+  stroke-width: 2px; }
+  #p3 circle {
+    fill: white; }
+  #p3 polyline {
+    fill: none; }
+
+#p4 {
+  transform: rotateX(180deg);
+  stroke: none;
+  stroke-width: 2px; }
+  #p4 rect {
+    fill: black; }
+
+/*# sourceMappingURL=style.css.map */

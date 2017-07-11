@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Axios Openweathermap</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="box" v-for="item in items">
+            <div class="date">{{ new Date(item.dt*1000).toDateString() }}</div>
+            <div class="max">最高溫{{ item.temp.max }}</div>
+            <div class="max">最低溫{{ item.temp.max }}</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                items:[]
+            },
+            mounted() {
+                var vobj  = this;
+                //                axios.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=Taipei&units=metric&cnt=7&appid=b1ecbccd638b763d489602917ba47cc3").then(response=>console.log(response.data));
+                axios.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                    params: {
+                        q: "Taipei",
+                        units: "metric",
+                        cnt: 7,
+                        appid: "b1ecbccd638b763d489602917ba47cc3"
+                    }
+
+                }).then(function(e) {
+                    vobj.items = e.data.list;
+                });
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

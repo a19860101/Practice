@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <svg viewbox="-50 -50 100 100" id="p1">
+        <line x1="-20" y1="0" x2="20" y2="0"></line>
+        <line x1="0" y1="-20" x2="0" y2="20"></line>
+        <circle cx="0" cy="0" r="10">
+            <animate attributeName="r"dur="2s"values="10;15;10"repeatCount="indefinite"></animate>
+        </circle>
+    </svg>
+    <svg viewbox="-50 -50 100 100" id="p2">
+        <circle cx="0" cy="0" r="10"></circle>
+        <g>
+            <animateTransform 
+            attributeName="transform"
+            type="rotate"
+            dur="2s"
+            values="0;180"
+            repeatCount="indefinite"
+            ></animateTransform>
+            <line x1="-20" y1="0" x2="20" y2="0"></line>
+            <line x1="0" y1="-20" x2="0" y2="20"></line>
+            <rect x="-20" y="-20" width="40" height="40">
+            </rect>
+        </g>
+    </svg>
+    <svg viewbox="0 0 200 200" id="p3">
+        <polyline points="0,100 50,40 100,90 150,60 200,130"></polyline>
+        <circle cx="0" cy="100" r="3"></circle>
+        <circle cx="50" cy="40" r="3"></circle>
+        <circle cx="100" cy="90" r="3"></circle>
+        <circle cx="150" cy="60" r="3"></circle>
+        <circle cx="200" cy="130" r="3"></circle>
+    </svg>
+    <svg viewbox="0 0 200 200" id="p4">
+        <rect x="0"y="0"width="20" height="100"></rect>
+        <rect x="30"y="0"width="20" height="60"></rect>
+        <rect x="60"y="0"width="20" height="120"></rect>
+        <rect x="90"y="0"width="20" height="190"></rect>
+        <rect x="120"y="0"width="20" height="170"></rect>
+        <rect x="150"y="0"width="20" height="130"></rect>
+        <rect x="180"y="0"width="20" height="160"></rect>
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+</body>
+
+</html>
